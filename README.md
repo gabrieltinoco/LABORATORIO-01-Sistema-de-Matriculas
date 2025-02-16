@@ -10,7 +10,7 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 
 ## Casos de Uso
 
-### Login no Sistema :
+### Login no Sistema
 
 **Como** usuário,<br/> 
 **Eu quero** acessar o sistema  com meu login e senha,<br/>
@@ -30,18 +30,6 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 **Eu quero** cancelar uma matrícula dentro do período permitido,<br/>
 **Para** ajustar minha grade de disciplinas.<br/>
 
-### Consultar Disciplinas Disponíveis
-
-**Como** aluno,<br/>
-**Eu quero** visualizar as disciplinas disponíveis para matrícula,<br/>
-**Para** escolher quais cursar no semestre.<br/>
-
-### Consultar Matrículas Realizadas
-
-**Como** aluno,<br/>
-**Eu quero** visualizar as disciplinas em que estou matriculado,<br/>
-**Para** acompanhar meu status acadêmico.<br/>
-
 
 ### Consultar Alunos Matriculados
 
@@ -50,14 +38,14 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 **Para** saber quem está participando da turma.<br/>
 
 
-### Gerenciar Currículo do Semestre:
+### Gerenciar Currículo do Semestre
 
 **Como** funcionário da Secretaria,<br/>
 **Eu quero** criar e atualizar o currículo do semestre,<br/>
 **Para** definir quais disciplinas estarão disponíveis.<br/>
 
 
-### Atualizar Informações de Professores
+### Atualizar Informações de Usuários
 
 **Como** funcionário da Secretaria,<br/>
 **Eu quero** atualizar os dados dos usuários,<br/>
