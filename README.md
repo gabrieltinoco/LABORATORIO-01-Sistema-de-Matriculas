@@ -6,7 +6,7 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 
 ## Integrantes do Grupo
 * [Gabriel Lucas Tinoco de Aguiar](https://github.com/gabrieltinoco)
-* [Gustavo Pimentel]()
+* [Gustavo Pimentel](https://github.com/gustavo-p0)
 
 ## Casos de Uso
 
@@ -64,3 +64,10 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 **Como** funcionário da Secretária,<br/>
 **Eu quero** cancelar disciplinas com menos de 3 alunos no fim do período de matrículas,<br/>
 **Para** otimizar os recursos da universidade.<br/>
+
+
+### Receber Notificações de Novas Matrículas
+
+**Como** o Sistema de Matrículas,<br/>
+**Eu quero** receber notificações após uma matrícula,<br/>
+**Para** que os alunos sejam cobrados pelas disciplinas do semestre.<br/>
