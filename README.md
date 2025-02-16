@@ -12,89 +12,67 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 
 ### Login no Sistema :
 
-**Como** usuário, 
-
-**Eu quero** acessar o sistema com meu login e senha,
-
-**Para** visualizar e gerenciar minhas informações.
+**Como** usuário,<br/> 
+**Eu quero** acessar o sistema  com meu login e senha,<br/>
+**Para** visualizar e gerenciar minhas informações.<br/>
 
 
 ### Realizar Matrícula
 
-**Como** aluno,
-
-**Eu quero** me matricular em até 4 disciplinas obrigatórias e 2 optativas,
-
-**Para** cursar as matérias desejadas no semestre.
+**Como** aluno,<br/>
+**Eu quero** me matricular em até 4 disciplinas obrigatórias e 2 optativas,<br/>
+**Para** cursar as matérias desejadas no semestre.<br/>
 
 
 ### Cancelar Matrícula
 
-**Como** aluno,
-
-**Eu quero** cancelar uma matrícula dentro do período permitido,
-
-**Para** ajustar minha grade de disciplinas.
-
+**Como** aluno,<br/>
+**Eu quero** cancelar uma matrícula dentro do período permitido,<br/>
+**Para** ajustar minha grade de disciplinas.<br/>
 
 ### Consultar Disciplinas Disponíveis
 
-**Como** aluno,
-
-**Eu quero** visualizar as disciplinas disponíveis para matrícula,
-
-**Para** escolher quais cursar no semestre.
-
+**Como** aluno,<br/>
+**Eu quero** visualizar as disciplinas disponíveis para matrícula,<br/>
+**Para** escolher quais cursar no semestre.<br/>
 
 ### Consultar Matrículas Realizadas
 
-**Como** aluno,
-
-**Eu quero** visualizar as disciplinas em que estou matriculado,
-
-**Para** acompanhar meu status acadêmico.
+**Como** aluno,<br/>
+**Eu quero** visualizar as disciplinas em que estou matriculado,<br/>
+**Para** acompanhar meu status acadêmico.<br/>
 
 
 ### Consultar Alunos Matriculados
 
-**Como** um professor,
-
-**Eu quero** visualizar a lista de alunos matriculados em minha disciplina,
-
-**Para** saber quem está participando da turma.
+**Como** um professor,<br/>
+**Eu quero** visualizar a lista de alunos matriculados em minha disciplina,<br/>
+**Para** saber quem está participando da turma.<br/>
 
 
 ### Gerenciar Currículo do Semestre:
 
-**Como** funcionário da Secretaria,
-
-**Eu quero** criar e atualizar o currículo do semestre,
-
-**Para** definir quais disciplinas estarão disponíveis.
+**Como** funcionário da Secretaria,<br/>
+**Eu quero** criar e atualizar o currículo do semestre,<br/>
+**Para** definir quais disciplinas estarão disponíveis.<br/>
 
 
 ### Atualizar Informações de Professores
 
-**Como** funcionário da Secretaria,
-
-**Eu quero** atualizar os dados dos usuários,
-
-**Para** manter as informações sempre corretas.
+**Como** funcionário da Secretaria,<br/>
+**Eu quero** atualizar os dados dos usuários,<br/>
+**Para** manter as informações sempre corretas.<br/>
 
 
 ### Encerrar Matrículas em Disciplinas Cheias
 
-**Como** funcionário da Secretária,
-
-**Eu quero** impedir novas matrículas em disciplinas com 60 alunos,
-
-**Para** garantir o limite máximo permitido.
+**Como** funcionário da Secretária,<br/>
+**Eu quero** impedir novas matrículas em disciplinas com 60 alunos,<br/>
+**Para** garantir o limite máximo permitido.<br/>
 
 
 ### Cancelar Disciplinas com Menos de 3 Alunos
 
-**Como** funcionário da Secretária,
-
-**Eu quero** cancelar disciplinas com menos de 3 alunos no fim do período de matrículas,
-
-**Para** otimizar os recursos da universidade.
+**Como** funcionário da Secretária,<br/>
+**Eu quero** cancelar disciplinas com menos de 3 alunos no fim do período de matrículas,<br/>
+**Para** otimizar os recursos da universidade.<br/>
