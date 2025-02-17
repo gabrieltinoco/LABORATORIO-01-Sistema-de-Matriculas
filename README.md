@@ -37,6 +37,12 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 **Eu quero** visualizar a lista de alunos matriculados em minha disciplina,<br/>
 **Para** saber quem está participando da turma.<br/>
 
+### Receber notificação de cobrança
+
+**Como** aluno,<br/>
+**Eu quero** receber notificações de cobrança referentes as disciplinas matriculadas,<br/>
+**Para** quitar os débitos com a universidade.<br/>
+
 
 ### Gerenciar Currículo do Semestre
 
@@ -45,29 +51,29 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 **Para** definir quais disciplinas estarão disponíveis.<br/>
 
 
-### Atualizar Informações de Usuários
+### Atualizar Informações
 
 **Como** funcionário da Secretaria,<br/>
-**Eu quero** atualizar os dados dos usuários,<br/>
+**Eu quero** gerenciar cursos, disciplinas, professores e alunos,<br/>
 **Para** manter as informações sempre corretas.<br/>
 
 
 ### Encerrar Matrículas em Disciplinas Cheias
 
-**Como** funcionário da Secretária,<br/>
+**Como** sistema,<br/>
 **Eu quero** impedir novas matrículas em disciplinas com 60 alunos,<br/>
 **Para** garantir o limite máximo permitido.<br/>
 
 
 ### Cancelar Disciplinas com Menos de 3 Alunos
 
-**Como** funcionário da Secretária,<br/>
+**Como** sistema,<br/>
 **Eu quero** cancelar disciplinas com menos de 3 alunos no fim do período de matrículas,<br/>
 **Para** otimizar os recursos da universidade.<br/>
 
 
 ### Receber Notificações de Novas Matrículas
 
-**Como** o Sistema de Matrículas,<br/>
+**Como** sistema de cobrança,<br/>
 **Eu quero** receber notificações após uma matrícula,<br/>
 **Para** que os alunos sejam cobrados pelas disciplinas do semestre.<br/>
