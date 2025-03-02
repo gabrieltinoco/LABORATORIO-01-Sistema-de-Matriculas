@@ -6,5 +6,7 @@ class Professor extends Usuario {
         this.disciplinas = [];
     }
     
-    visualizarAlunos(disciplina) {}
+    visualizarAlunos(disciplina) {
+        return disciplina.alunosMatriculados;
+    }
 }

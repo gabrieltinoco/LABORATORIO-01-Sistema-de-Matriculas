@@ -5,8 +5,16 @@ class Secretaria {
         this.professores = [];
     }
     
-    gerarCurriculo(disciplinas) {}
-    atualizarInformacoesCurso(id) {}
-    encerrarDisciplina(id) {}
-    cancelarDisciplina(id) {}
+    gerarCurriculo(disciplinas) {
+        return new Curriculo(Date.now(), 'Atual', disciplinas);
+    }
+    atualizarInformacoesCurso(curso) {
+        // Atualiza informações do curso
+    }
+    encerrarDisciplina(disciplina) {
+        disciplina.status = EstadoDisciplina.ENCERRADA;
+    }
+    cancelarDisciplina(disciplina) {
+        disciplina.status = EstadoDisciplina.CANCELADA;
+    }
 }

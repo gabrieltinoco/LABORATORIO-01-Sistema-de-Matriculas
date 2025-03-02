@@ -12,6 +12,18 @@ class Disciplina {
         this.status = EstadoDisciplina.ATIVA;
     }
     
-    adicionarAluno(aluno) {}
-    removerAluno(aluno) {}
+    adicionarAluno(aluno) {
+        if (this.alunosMatriculados.length < Disciplina.MAX_ALUNOS) {
+            this.alunosMatriculados.push(aluno);
+            return true;
+        }
+        return false;
+    }
+    
+    removerAluno(aluno) {
+        this.alunosMatriculados = this.alunosMatriculados.filter(a => a.id !== aluno.id);
+        if (this.alunosMatriculados.length < Disciplina.MIN_ALUNOS) {
+            this.status = EstadoDisciplina.CANCELADA;
+        }
+    }
 }

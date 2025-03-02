@@ -6,6 +6,10 @@ class Curso {
         this.disciplinas = [];
     }
     
-    adicionarDisciplina(id) {}
-    removerDisciplina(id) {}
+    adicionarDisciplina(disciplina) {
+        this.disciplinas.push(disciplina);
+    }
+    removerDisciplina(disciplina) {
+        this.disciplinas = this.disciplinas.filter(d => d.id !== disciplina.id);
+    }
 }

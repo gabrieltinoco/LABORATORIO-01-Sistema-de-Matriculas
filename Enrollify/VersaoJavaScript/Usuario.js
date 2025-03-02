@@ -5,9 +5,8 @@ class Usuario {
         this.login = login;
         this.senha = senha;
     }
-
-    autenticar(login, senha) {}
+    autenticar(login, senha) {
+        return this.login === login && this.senha === senha;
+    }
 }
-
 export default Usuario;
-admin.js

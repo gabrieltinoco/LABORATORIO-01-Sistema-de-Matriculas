@@ -5,5 +5,7 @@ class Notificacao {
         this.lida = false;
     }
     
-    ler() {}
+    ler() {
+        this.lida = true;
+    }
 }

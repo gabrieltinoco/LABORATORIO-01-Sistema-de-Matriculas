@@ -12,8 +12,16 @@ class Aluno extends Usuario {
         this.notificacoes = [];
     }
     
-    matricular(id) {}
-    cancelarDisciplina(id) {}
+    matricular(disciplina) {
+        if (this.disciplinasMatriculadas.length < Aluno.MAX_DISCIPLINA_OBRIGATORIAS + Aluno.MAX_OPTATIVAS) {
+            this.disciplinasMatriculadas.push(disciplina);
+            return true;
+        }
+        return false;
+    }
+    
+    cancelarDisciplina(disciplina) {
+        this.disciplinasMatriculadas = this.disciplinasMatriculadas.filter(d => d.id !== disciplina.id);
+    }
 }
-
 export default Aluno;

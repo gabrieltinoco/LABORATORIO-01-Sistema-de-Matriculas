@@ -5,6 +5,10 @@ class Curriculo {
         this.disciplinas = [];
     }
     
-    adicionarDisciplina(disciplina) {}
-    removerDisciplina(disciplina) {}
+    adicionarDisciplina(disciplina) {
+        this.disciplinas.push(disciplina);
+    }
+    removerDisciplina(disciplina) {
+        this.disciplinas = this.disciplinas.filter(d => d.id !== disciplina.id);
+    }
 }
