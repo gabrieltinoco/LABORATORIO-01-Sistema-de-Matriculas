@@ -78,3 +78,11 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 **Como** sistema de cobrança,<br/>
 **Eu quero** receber notificações após uma matrícula,<br/>
 **Para** que os alunos sejam cobrados pelas disciplinas do semestre.<br/>
+
+## Diagrama de Caso de Uso
+![diagrama de casos de uso (1)](https://github.com/user-attachments/assets/74972f53-6ae2-441d-889d-e276fcfabd51)
+
+## Diagrama de Classe
+![LAB_01_-_sistema_de_matriculas-Diagrama de Classes](https://github.com/user-attachments/assets/51a49a68-edc2-4bdf-b037-6bd6c5778f51)
+
+
