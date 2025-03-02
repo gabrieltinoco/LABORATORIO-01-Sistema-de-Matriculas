@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sistema_de_matricula
+    container_name: postgres-sistema-de-matricula
+    ports:
+      - '${DB_PORT:-5432}:${DB_PORT:-5432}'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 10s
+      retries: 5
+      timeout: 5s
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sistema-de-matricula
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - '${APP_PORT:-3000}:${APP_PORT:-3000}'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - PORT=${APP_PORT:-3000}
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+volumes:
+  postgres_data:
