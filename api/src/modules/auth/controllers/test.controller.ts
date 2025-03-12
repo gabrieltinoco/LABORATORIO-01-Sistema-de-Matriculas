@@ -7,7 +7,7 @@ import { RolesGuard } from 'src/modules/auth/guards/roles.guard';
 @Controller('/test')
 export class TestController {
   @UseGuards(AuthGuard, RolesGuard)
-  @Roles(Role.Manager)
+  @Roles(Role.Manager, Role.Student)
   @Get()
   test() {
     return 'Hello, World';

@@ -2,7 +2,7 @@ import { AuthRepository } from 'src/modules/auth/repositories/auth.prisma.reposi
 import * as bcrypt from 'bcryptjs';
 import { Injectable } from '@nestjs/common';
 import { Role } from 'src/modules/auth/enums/role.enum';
-import { CreatedUserDTO } from 'src/modules/auth/dto/response/created-user.dto';
+import { CreatedUserDTO } from 'src/modules/auth/dtos/response/created-user.dto';
 
 @Injectable()
 export class RegisterService {

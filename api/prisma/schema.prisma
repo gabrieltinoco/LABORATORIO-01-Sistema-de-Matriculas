@@ -20,17 +20,20 @@ enum Role {
 }
 
 model User {
-  id           String         @id @default(uuid())
-  email        String         @unique
-  password     String
-  role         Role           @default(Student)
-  name         String
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
-  courses      Course[]
-  Charge       Charge[]
-  Discipline   Discipline[]
-  Notification Notification[]
+  id            String         @id @default(uuid())
+  email         String         @unique
+  password      String
+  role          Role           @default(Student)
+  name          String
+  charges       Charge[]
+  notifications Notification[]
+  disciplines   Discipline[]
+
+  Course   Course? @relation(fields: [courseId], references: [id])
+  courseId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum NotificationType {
@@ -45,15 +48,16 @@ enum NotificationStatus {
 }
 
 model Notification {
-  id        String             @id @default(uuid())
-  title     String
-  content   String
-  user      User               @relation(fields: [userId], references: [id])
-  userId    String
-  type      NotificationType
-  status    NotificationStatus @default(Unread)
-  createdAt DateTime           @default(now())
-  updatedAt DateTime           @updatedAt
+  id      String             @id @default(uuid())
+  title   String
+  content String
+  user    User               @relation(fields: [userId], references: [id])
+  userId  String
+  type    NotificationType
+  status  NotificationStatus @default(Unread)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum PaymentMethod {
@@ -71,21 +75,24 @@ model Charge {
   paid          Boolean       @default(false)
   paymentMethod PaymentMethod
   expiration    DateTime
-  createdAt     DateTime      @default(now())
-  updatedAt     DateTime      @updatedAt
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Course {
-  id           String     @id @default(uuid())
-  name         String
-  description  String
-  credits      Int
+  id          String       @id @default(uuid())
+  name        String
+  description String
+  credits     Int
+  users       User[]
+  disciplines Discipline[]
+
   curriculum   Curriculum @relation(fields: [curriculumId], references: [id])
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
   curriculumId String
-  User         User?      @relation(fields: [userId], references: [id])
-  userId       String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum DisciplineState {
@@ -95,20 +102,25 @@ enum DisciplineState {
 }
 
 model Discipline {
-  id           String          @id @default(uuid())
-  name         String
-  price        Float
-  semester     Int
-  state        DisciplineState @default(Active)
-  description  String
-  credits      Int
-  professor    User            @relation(fields: [professorId], references: [id])
-  professorId  String
-  courseId     String
-  createdAt    DateTime        @default(now())
-  updatedAt    DateTime        @updatedAt
-  Curriculum   Curriculum?     @relation(fields: [curriculumId], references: [id])
+  id          String          @id @default(uuid())
+  name        String
+  price       Float
+  semester    Int
+  state       DisciplineState @default(Active)
+  description String
+  credits     Int
+
+  Professor   User   @relation(fields: [professorId], references: [id])
+  professorId String
+
+  Course   Course @relation(fields: [courseId], references: [id])
+  courseId String
+
+  Curriculum   Curriculum? @relation(fields: [curriculumId], references: [id])
   curriculumId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Curriculum {
@@ -116,7 +128,8 @@ model Curriculum {
   name        String
   description String
   disciplines Discipline[]
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  Course      Course[]
+  courses     Course[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

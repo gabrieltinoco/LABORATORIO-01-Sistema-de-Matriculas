@@ -1,7 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AuthModule } from 'src/modules/auth/auth.module';
+import { CurriculumModule } from 'src/modules/secretary/curriculum/curriculum.module';
+import { DisciplineModule } from 'src/modules/secretary/discipline/discipline.module';
 
 @Module({
-  imports: [AuthModule],
+  imports: [DisciplineModule, CurriculumModule],
+  providers: [],
+  controllers: [],
+  exports: [],
 })
-export class AppModule {}
+export class SecretaryModule {}
