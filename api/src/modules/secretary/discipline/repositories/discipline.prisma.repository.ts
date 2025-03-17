@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Discipline } from '@prisma/client';
 import { PrismaService } from 'src/modules/prisma/prisma.service';
 
 @Injectable()
@@ -14,14 +15,7 @@ export class DisciplineRepository {
     semester: number,
     curriculumId: string,
     professorId: string,
-  ): Promise<{
-    id: string;
-    name: string;
-    description: string;
-    credits: number;
-    price: number;
-    semester: number;
-  }> {
+  ): Promise<Discipline> {
     return this.prisma.discipline.create({
       data: {
         credits,
@@ -33,13 +27,49 @@ export class DisciplineRepository {
         professorId,
         curriculumId,
       },
-      select: {
-        id: true,
-        credits: true,
-        description: true,
-        name: true,
-        price: true,
-        semester: true,
+    });
+  }
+
+  async delete(id: string): Promise<void> {
+    await this.prisma.discipline.delete({
+      where: {
+        id,
+      },
+    });
+  }
+
+  async edit(
+    id: string,
+    courseId: string,
+    credits: number,
+    description: string,
+    name: string,
+    price: number,
+    semester: number,
+    curriculumId: string,
+    professorId: string,
+  ): Promise<Discipline> {
+    return this.prisma.discipline.update({
+      where: {
+        id,
+      },
+      data: {
+        courseId,
+        credits,
+        description,
+        name,
+        price,
+        semester,
+        curriculumId,
+        professorId,
+      },
+    });
+  }
+
+  async findById(id: string): Promise<Discipline | null> {
+    return this.prisma.discipline.findUnique({
+      where: {
+        id,
       },
     });
   }

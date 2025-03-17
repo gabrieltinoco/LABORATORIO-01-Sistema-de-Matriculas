@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { Discipline } from '@prisma/client';
 import { CreateDisciplineRequestDTO } from 'src/modules/secretary/discipline/dtos/request/create-discipline.request.dto';
-import { CreateDisciplineResponseDTO } from 'src/modules/secretary/discipline/dtos/response/create-discipline.response.dto';
 import { DisciplineRepository } from 'src/modules/secretary/discipline/repositories/discipline.prisma.repository';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class CreateDisciplineService {
     price,
     professorId,
     semester,
-  }: CreateDisciplineRequestDTO): Promise<CreateDisciplineResponseDTO> {
+  }: CreateDisciplineRequestDTO): Promise<Discipline> {
     return this.repository.create(
       courseId,
       credits,

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { Curriculum } from '@prisma/client';
 import { CreateCurriculumRequestDTO } from 'src/modules/secretary/curriculum/dtos/request/create-curriculum.request.dto';
-import { CreateCurriculumResponseDTO } from 'src/modules/secretary/curriculum/dtos/response/create-curriculum.response.dto';
 import { CurriculumRepository } from 'src/modules/secretary/curriculum/repositories/curriculum.prisma.repository';
 
 @Injectable()
@@ -10,7 +10,7 @@ export class CreateCurriculumService {
   async execute({
     name,
     description,
-  }: CreateCurriculumRequestDTO): Promise<CreateCurriculumResponseDTO> {
+  }: CreateCurriculumRequestDTO): Promise<Curriculum> {
     return this.repository.create(name, description);
   }
 }
