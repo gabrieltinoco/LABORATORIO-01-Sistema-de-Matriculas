@@ -5,10 +5,11 @@ import { TestController } from 'src/modules/auth/controllers/test.controller';
 import { AuthRepository } from 'src/modules/auth/repositories/auth.prisma.repository';
 import { LoginService } from 'src/modules/auth/services/login.service';
 import { RegisterService } from 'src/modules/auth/services/register.service';
-import { PrismaService } from 'src/prisma.service';
+import { PrismaModule } from 'src/modules/prisma/prisma.module';
 
 @Module({
-  providers: [AuthRepository, LoginService, RegisterService, PrismaService],
+  imports: [PrismaModule],
+  providers: [AuthRepository, LoginService, RegisterService],
   controllers: [LoginController, RegisterController, TestController],
 })
 export class AuthModule {}

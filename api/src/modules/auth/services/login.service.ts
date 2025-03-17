@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { AuthRepository } from '../repositories/auth.prisma.repository';
 import * as jwt from 'jsonwebtoken';
 import * as bcrypt from 'bcryptjs';
-import { UserTokenDTO } from 'src/modules/auth/dto/response/user-token.dto';
+import { UserTokenDTO } from 'src/modules/auth/dtos/response/user-token.dto';
 
 @Injectable()
 export class LoginService {
