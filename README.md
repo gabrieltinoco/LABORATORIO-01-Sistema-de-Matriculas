@@ -8,7 +8,7 @@ O Enrollify, Sistema de Matrículas Universitárias é uma aplicação web desen
 * [Gabriel Lucas Tinoco de Aguiar](https://github.com/gabrieltinoco)
 * [Gustavo Pimentel Carvalho Costa](https://github.com/gustavo-p0)
 
-## Casos de Uso
+## Histórias de Usuário
 
 ### Login no Sistema
 
